@@ -6,17 +6,16 @@
 </head>
 <body>
     <h1>
-        <%
-            java.util.Calendar cal = java.util.Calendar.getInstance();
-            int hour = cal.get(java.util.Calendar.HOUR_OF_DAY);
-            String greeting;
-            if (hour < 12) {
-                greeting = "Good morning";
-            } else {
-                greeting = "Good afternoon";
-            }
-        %>
-        <%= greeting %>, Seyeon! Welcome to COMP367!
+		<%
+		    String greeting = "Welcome to COMP367!";
+		    java.util.Date date = new java.util.Date();
+		    int hour = date.getHours();
+		    if (hour < 12) {
+		        greeting = "Good morning, John, " + greeting;  // 오전 인사
+		    } else {
+		        greeting = "Good afternoon, John, " + greeting;  // 오후 인사
+		    }
+		%>
     </h1>
 </body>
 </html>
