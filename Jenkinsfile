@@ -19,12 +19,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test'  // Maven을 사용한 테스트
+                sh '/usr/local/bin/mvn test'  // Maven을 사용한 테스트
             }
         }
         stage('Deploy') {
             steps {
-                sh 'mvn jetty:run &'  // Jetty 서버 실행
+                sh '/usr/local/bin/mvn jetty:run &'  // Jetty 서버 실행
             }
         }
     }
