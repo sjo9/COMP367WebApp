@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package'  // Maven을 사용한 빌드
+                sh '/usr/local/bin/mvn clean package'  // Maven을 사용한 빌드
             }
         }
         stage('Test') {
