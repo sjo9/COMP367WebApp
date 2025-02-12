@@ -6,16 +6,18 @@
 </head>
 <body>
     <h1>
-		<%
-		    String greeting = "Welcome to COMP367!";
-		    java.util.Date date = new java.util.Date();
-		    int hour = date.getHours();
-		    if (hour < 12) {
-		        greeting = "Good morning, John, " + greeting;  // 오전 인사
-		    } else {
-		        greeting = "Good afternoon, John, " + greeting;  // 오후 인사
-		    }
-		%>
+        <%
+            String greeting = "Welcome to COMP367!";
+            java.time.LocalTime currentTime = java.time.LocalTime.now();
+            int hour = currentTime.getHour();
+
+            if (hour < 12) {
+                greeting = "Good morning, Seyeon, " + greeting;
+            } else {
+                greeting = "Good afternoon, Seyeon, " + greeting;
+            }
+            out.print(greeting);
+        %>
     </h1>
 </body>
 </html>
