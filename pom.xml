@@ -9,6 +9,12 @@
   <name>comp367-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -40,6 +46,9 @@
           <webApp>
             <contextPath>/</contextPath>
           </webApp>
+          <httpConnector>
+            <port>8081</port>
+          </httpConnector>
         </configuration>
       </plugin>
     </plugins>
