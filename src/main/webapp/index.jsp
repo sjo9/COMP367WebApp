@@ -9,14 +9,14 @@
         <%
             String greeting = "Welcome to COMP367!";
             java.time.LocalTime currentTime = java.time.LocalTime.now();
-            int hour = currentTime.getHour();  // 현재 시간을 가져옵니다.
+            int hour = currentTime.getHour();
 
             if (hour < 12) {
-                greeting = "Good morning, Seyeon, " + greeting;  // 오전 인사
+                greeting = "Good morning, Seyeon, " + greeting;
             } else {
-                greeting = "Good afternoon, Seyeon, " + greeting;  // 오후 인사
+                greeting = "Good afternoon, Seyeon, " + greeting;
             }
-            out.print(greeting);  // 결과를 출력
+            out.print(greeting);
         %>
     </h1>
 </body>
